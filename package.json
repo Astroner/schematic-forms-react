@@ -1,0 +1,39 @@
+{
+  "name": "@schematic-forms/react",
+  "version": "0.8.0",
+  "description": "react adapter for schematic forms",
+  "main": "lib/index.js",
+  "scripts": {
+    "start:dev": "parcel index.html",
+    "build": "rollup -c"
+  },
+  "keywords": [
+    "react",
+    "react-schematic-forms",
+    "form-processing",
+    "context-forms"
+  ],
+  "author": "zhenyanikforov@gmail.com",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/react": "^16.9.48",
+    "@types/react-dom": "^16.9.8",
+    "parcel-bundler": "^1.12.4",
+    "rollup": "^2.26.7",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "rollup-plugin-peer-deps-external": "^2.2.3",
+    "rollup-plugin-typescript2": "^0.27.2",
+    "typescript": "^4.0.2"
+  },
+  "peerDependencies": {
+    "react": ">=16.8.0"
+  },
+  "module": "lib/index.es.js",
+  "jsnext:main": "lib/index.es.js",
+  "dependencies": {
+    "@schematic-forms/core": ">=0.6.5",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1"
+  }
+}

@@ -1,0 +1,10 @@
+node_modules/
+src/
+index.html
+index.tsx
+tsconfig.json
+dist/
+.cache
+.npmignore
+.git/
+rollup.config.js
