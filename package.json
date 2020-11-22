@@ -1,6 +1,6 @@
 {
   "name": "@schematic-forms/react",
-  "version": "0.8.4",
+  "version": "0.8.5",
   "description": "react adapter for schematic forms",
   "main": "lib/index.js",
   "scripts": {
@@ -16,6 +16,9 @@
   "author": "zhenyanikforov@gmail.com",
   "license": "ISC",
   "devDependencies": {
+    "@schematic-forms/core": ">=0.6.5",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
     "@types/react": "^16.9.48",
     "@types/react-dom": "^16.9.8",
     "parcel-bundler": "^1.12.4",
@@ -31,10 +34,5 @@
     "@schematic-forms/core": ">=0.6.5"
   },
   "module": "lib/index.es.js",
-  "jsnext:main": "lib/index.es.js",
-  "dependencies": {
-    "@schematic-forms/core": ">=0.6.5",
-    "react": "^17.0.1",
-    "react-dom": "^17.0.1"
-  }
+  "jsnext:main": "lib/index.es.js"
 }
