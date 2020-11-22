@@ -265,7 +265,7 @@ return (
 ```
 ##### PendingConsumer
 
-Listening to controller pending status.
+Keeping the controllers status in check.
 ```tsx
 // Example
 // ... react component with useController hook
