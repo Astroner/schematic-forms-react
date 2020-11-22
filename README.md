@@ -87,12 +87,12 @@ type ErrorConsumerProps = {
     code?: string
 }
 ``` 
-If no props will be provided **ErrorConsumer** will react on any exception in any fields. 
+If no props were provided **ErrorConsumer** will react on any exception in any fields. 
 As children u can pass RenderFunction like in example above or just ReactNode.
 
 #### Value types
 
-Types you can pass in "fields" object.
+Types you can pass into "fields" object.
 ```ts
 const fields = {
     str: Str(required: boolean, defaultValue: string),
@@ -140,7 +140,7 @@ const mixedType = Mix([
 
 ##### useForm
 
-useForm is a clear way to change controller fields and create custom form fields.
+useForm is a right way to change controller fields and create custom form fields.
 ```tsx
 function useForm<ValueType>(
     name: string, 
@@ -182,7 +182,7 @@ return (
 
 ##### usePending
 
-If your submit function return Promise you probably want to know it`s status. usePending returns { isPending: true } if promise is pending and { isPending: false } if not.
+If your submit function returns Promise you probably want to know it`s status. usePending returns { isPending: true } if promise is pending and { isPending: false } if not.
 ```tsx
 // ... react component with useController hook
 const { isPending } = usePending(controller)
@@ -196,7 +196,7 @@ return (
 
 ##### useValue
 
-Return controller field value
+Returns controller field value
 ```tsx
 // ... react component with useController hook
 const { controller } = useController({
@@ -213,7 +213,7 @@ return (
 
 ##### ErrorConsumer
 
-Cunsumes controller errors using context.
+Consumes controller errors using context.
 ```tsx
 interface ErrorConsumerProps {
     children: 
@@ -229,7 +229,7 @@ interface ErrorConsumerProps {
     error?: string
 }
 ```
- - Without "field" prop component will triggers on any error in any field. 
+ - Without "field" prop component will trigger on any error in any field. 
  - "error" prop specify which error type in "field" should trigger re-render.
 
 ```tsx
