@@ -123,7 +123,7 @@ const book = Obj({
 // Enum type example
 const gender = Arr<["M", "F"]>(["M", "F"], true) 
 /* 
-You have to use generic argument because typescript identify array like ["M", "F"] as string array.
+You have to use generic argument because typescript identifies arrays like ["M", "F"] as a string array.
 */
 
 // Array type example

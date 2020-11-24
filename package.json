@@ -1,6 +1,6 @@
 {
   "name": "@schematic-forms/react",
-  "version": "0.8.6",
+  "version": "0.8.7",
   "description": "react adapter for schematic forms",
   "main": "lib/index.js",
   "scripts": {
