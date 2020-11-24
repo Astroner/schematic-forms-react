@@ -200,12 +200,16 @@ Returns controller field value
 ```tsx
 // ... react component with useController hook
 const { controller } = useController({
+    fields: {
+        email: Str(true)
+    }
 })
-const { isPending } = usePending(controller)
+
+const email = useValue(controller, "email")
+
 return (
     <div>
-        {isPending && "LOADING..."}
-        {/* ... */}
+        email: {email}
     </div>
 )
 ```
