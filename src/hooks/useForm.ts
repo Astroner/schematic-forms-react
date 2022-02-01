@@ -35,7 +35,7 @@ function useForm<ValueType>(
     useEffect(() => {
         if(!context) return 
         const sub1 = context.controller.subscribe("values", (values) => {
-            setState(values[name])
+            setState(values[name] ?? nullValue)
         })
         const sub2 = context.controller.subscribe("errors", (errors) => {
             setErrors(errors[name] || null)
