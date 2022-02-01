@@ -14,13 +14,14 @@ const useController = <FieldTypes extends { [key: string]: All }, ArgTypes exten
     config: ControllerConfig<FieldTypes, ArgTypes>
 ): {
     controller: FormController<FieldTypes, ArgTypes>, 
-    submit: (...arg: ArgTypes) => void
+    submit: (...arg: ArgTypes) => void,
+    clear: VoidFunction,
 } => {
     const [controller] = useState(new FormController<FieldTypes, ArgTypes>(config));
     const submit = useCallback((...arg: ArgTypes) => controller.submit(...arg), [controller])
+    const clear = useCallback(() => controller.clear(), [controller])
 
-
-    return { controller, submit }
+    return { controller, submit, clear }
 }
 
 export default useController

@@ -13,7 +13,7 @@ import { useController, FormProvider, FieldConsumer } from '@schematic-forms/rea
 import { Str } from '@schematic-forms/core'
 
 export const Form: FC<{}> = () => {
-    const { controller, submit } = useController({
+    const { controller, submit, clear } = useController({
         fields: {
             email: Str(true),
             password: Str(true)
@@ -49,11 +49,12 @@ export const Form: FC<{}> = () => {
                     <button disabled={hasError} onClick={submit} >Submit</button>
                 )}
             </ErrorConsumer>
+            <button onClick={clear}>Clear</button>
         </FormProvider>
     )
 }
 ```
-What's going on here, yeah? Let me explain. Lets start with useController() hook. it takes config and returns object like { controller, submit } 
+What's going on here, yeah? Let me explain. Lets start with useController() hook. it takes config and returns object like { controller, submit, clear } 
 ```typescript
 type config = {
     fields: {
